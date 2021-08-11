@@ -94,6 +94,14 @@ mbedtls_net_context;
 void mbedtls_net_init( mbedtls_net_context *ctx );
 
 /**
+ * \brief          Initialize a contexte with a given file descriptor
+ *
+ * \param ctx      Context to initialize
+ * \param fd       File descriptor to set in the context
+ */
+void mbedtls_net_set_fd( mbedtls_net_context *ctx, const int fd );
+
+/**
  * \brief          Initiate a connection with host:port in the given protocol
  *
  * \param ctx      Socket to use
